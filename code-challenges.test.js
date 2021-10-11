@@ -122,12 +122,36 @@ describe('checks if the hand has a full house or not', (array) =>{
 // we want to do this by setting up a for lop to run through the array and check if there is a full house
 // i got stuck on this one and tried diffrent things but i couldnt come to a solution. in my head i know i want to have the for loop run through and itterate throguh and check but i dont know the logic for it. 
 // i asked a few classmates and i got a few results includeing .includes, .map, .value, but i dont know how i could use those in this instance.
+
+
+
+// this is the code from today as we went over this question in class. we were running a little late so we only went over one way of clearing the problem.
+// i still watched and asked questions on how and what did what as sarah went throguh and filled it out.
+// i wanted to try to try and code this out on my own with the resouce of the already andswered question but theres a few things i dont understand about it.
 const handChecker = (array) => {
-    let newArray = []
-    for(let i=0; i<array.length; i++){
-        if (array[i] === array[i], array[i], array[i]){
-            
+    let fisrtCard = array[0]
+    let fisrtCardCounter = 0
+    let secondCard = null // why is the second card set to null and not array[0] or array[1] or something else. i thought null meant that it doesnt exist and that we couldnt add anything to null
+    let secondCardCounter = 0
+    array.forEach(value =>{
+        if(value === fisrtCard){// waht is value equating to when we look for first card
+            fisrtCardCounter += 1
+        } else {
+            secondCard = value
         }
+    })
+    array.forEach(value => {
+        if(value === secondCard){
+            secondCardCounter += 1
+        }
+    })
+    if(fisrtCardCounter === 3 && secondCardCounter === 2){ // why are we setting the firstcardcounter and swecondcard counter to 3 and 2 or 2 and 3
+        return true
+    }else if(fisrtCardCounter === 2 && secondCardCounter === 3){
+        return true
+    }else{
+        return false
     }
 }
+
 
