@@ -7,7 +7,7 @@ Then, research the question to expand on your answer. Even if you feel you have 
 
 1. Are (most) Ruby methods accessors or mutators?
 
-  Your answer: we just reviewed in kahoot that most methods in ruby are accessors. 
+  Your answer: we just reviewed in kahoot that most methods in ruby are accessors. anything that doesnt permenantly change the line line of code is a accessor like .replace.
 
   Researched answer:most methods in ruby are accessors but they can become permanent with the ! operator. 
 
